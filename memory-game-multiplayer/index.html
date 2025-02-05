@@ -15,20 +15,29 @@
     <div class="grid-selection">
       <label for="gridRows">Rows:</label>
       <input type="number" id="gridRows" min="2" max="10" step="1" placeholder="2-10">
-      
+
       <label for="gridCols">Columns:</label>
       <input type="number" id="gridCols" min="2" max="10" step="1" placeholder="2-10">
-      
+
       <button id="startGameBtn">Start Game</button>
     </div>
   </div>
 
   <div class="game-container hidden">
     <h1>Memory Matching Game</h1>
-    
+
     <div class="game-info">
       <span>Moves: <span id="moveCounter">0</span></span>
       <span>Time: <span id="timer">00:00</span></span>
+    </div>
+
+    <div class="player-info">
+      <span>Current Turn: <span id="currentPlayer">Player 1</span></span>
+    </div>
+
+    <div class="scoreboard">
+      <span>Player 1 Score: <span id="player1Score">0</span></span>
+      <span>Player 2 Score: <span id="player2Score">0</span></span>
     </div>
 
     <div id="gameGrid" class="game-grid"></div>

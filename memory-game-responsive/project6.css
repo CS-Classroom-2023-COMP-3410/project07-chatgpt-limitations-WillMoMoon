@@ -88,39 +88,54 @@
 
 /* 🎮 Centered Game Container */
 .game-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: min(90vw, 600px); /* Responsive width */
-    background: #fff;
-    border: 5px solid #333;
-    border-radius: 10px;
-    padding: 20px;
-    z-index: 1000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  max-width: 600px;
+  max-height: 600px;
+  background: #fff;
+  border: 5px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 🃏 Game Grid */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+  gap: 2vw;
+  width: 90%;
+  height: 90%;
+  max-width: 500px;
+  max-height: 500px;
+  margin: auto;
 }
 
 /* 🔘 Buttons */
 button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background: #6fa3ef;
-    color: white;
+  padding: 2vw 3vw;
+  font-size: 1.2vw;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #6fa3ef;
+  color: white;
+  transition: transform 0.2s;
 }
 
 button:hover {
-    background: #5c8fd6;
+  background: #5c8fd6;
+  transform: scale(1.1);
 }
 /* 🎭 Assign Animations */
 .pivot-dance { animation: pivotDance 0.6s infinite; }
